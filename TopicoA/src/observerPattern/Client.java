@@ -3,7 +3,7 @@ package observerPattern;
 public class Client {
 
 	public static void main(String[] args) {
-		System.out.println("Observer Pattern");
+		System.out.println("Observer Design Pattern");
 	}
 
 }

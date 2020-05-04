@@ -11,6 +11,7 @@ public class Client {
 		figurineMaker.buildFigurine();
 		System.out.println("Humanoid Figurine info: " + figurineMaker.getFigurineInfo());
 		
+		
 		FigurineMakerDirector monsterMaker = new FigurineMakerDirector(monsterBuilder);
 		monsterMaker.buildFigurine();
 		System.out.println("Monster Figurine info: " + monsterMaker.getFigurineInfo());

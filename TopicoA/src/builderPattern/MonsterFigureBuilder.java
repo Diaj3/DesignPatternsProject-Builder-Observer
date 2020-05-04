@@ -2,7 +2,7 @@ package builderPattern;
 
 public class MonsterFigureBuilder implements FigurineBuilder {
 	
-	private Figurine figurine;
+	Figurine figurine = new Figurine();
 	
 	public MonsterFigureBuilder() {
 		this.figurine = figurine;

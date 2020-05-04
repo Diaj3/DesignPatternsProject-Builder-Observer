@@ -2,7 +2,7 @@ package builderPattern;
 
 public class ChibiFigureBuilder implements FigurineBuilder {
 	
-	private Figurine figurine;
+	Figurine figurine = new Figurine();
 	
 	public ChibiFigureBuilder () {
 		this.figurine = figurine;

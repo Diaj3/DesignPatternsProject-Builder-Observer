@@ -1,16 +1,15 @@
 package observerPattern;
 
 import java.util.ArrayList;
-import java.util.Hashtable;
 
-public class FootballGamesInfo implements FootballGames{
+public class FootballGamesInfo implements GamesInfoInterface{
 	
 	private ArrayList<Observer> observers;
 	private int homeTeamGoals;
 	private int outsideTeamGoals;
 	private String game_time;
-	private Hashtable<String, String> homeTeam_goal_scorer;
-	private Hashtable<String, String> outsideTeam_goal_scorer;
+	private String homeTeam_goal_scorer;
+	private String outsideTeam_goal_scorer;
 	private int yellowCards;
 	private int redCards;
 	
@@ -22,7 +21,7 @@ public class FootballGamesInfo implements FootballGames{
 	@Override
 	public void register(Observer observer) {
 		observers.add(observer);
-		System.out.println("Observer " + observer + " was added!");
+		System.out.println("An observer added!");
 	}
 
 	@Override
@@ -30,7 +29,7 @@ public class FootballGamesInfo implements FootballGames{
 		int o = observers.indexOf(observer);
 		observers.remove(o);
 		
-		System.out.println("Observer " + observer + " was removed!");
+		System.out.println("An observer removed!");
 	}
 
 	@Override
@@ -67,13 +66,13 @@ public class FootballGamesInfo implements FootballGames{
 	}
 
 
-	public void setHomeTeam_goal_scorer(Hashtable<String, String> homeTeam_goal_scorer) {
+	public void setHomeTeam_goal_scorer(String homeTeam_goal_scorer) {
 		this.homeTeam_goal_scorer = homeTeam_goal_scorer;
 		notifyObersers();
 	}
 
 
-	public void setOutsideTeam_goal_scorer(Hashtable<String, String> outsideTeam_goal_scorer) {
+	public void setOutsideTeam_goal_scorer(String outsideTeam_goal_scorer) {
 		this.outsideTeam_goal_scorer = outsideTeam_goal_scorer;
 		notifyObersers();
 	}
